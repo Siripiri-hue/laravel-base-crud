@@ -3,6 +3,8 @@
 @section('mainContent')
 
 <form action="{{ route('comics.store') }}" method="POST">
+    @csrf
+
     <div>
         <label for="title">Titolo</label>
         <input type="text" name="title" placeholder="Inserire titolo del fumetto">
@@ -11,6 +13,11 @@
     <div>
         <label for="description">Descrizione</label>
         <textarea name="description" cols="30" rows="10">Inserire descrizione</textarea>
+    </div>
+
+    <div>
+        <label for="series">Serie</label>
+        <input type="text" name="series" placeholder="Inserire denominazione serie">
     </div>
 
     <div>
