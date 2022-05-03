@@ -6,6 +6,7 @@
     <caption>
         <p>Fumetti disponibili</p>
     </caption>
+    
     <thead>
         <tr>
             <th>Titolo</th>
@@ -26,9 +27,10 @@
                 <td>{{ $comic->series }}</td>
                 <td>{{ $comic->sale_date }}</td>
                 <td>{{ $comic->type }}</td>
+                <td><a href="{{ route('comics.show', $comic) }}">Visualizza</a></td>
             </tr>
         @endforeach
     </tbody>
-    </table>
+</table>
 
 @endsection
