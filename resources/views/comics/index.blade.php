@@ -2,11 +2,13 @@
 
 @section('mainContent')
 
+<a href="{{ route('comics.create') }}">Aggiungi fumetto</a>
+
 <table>
     <caption>
         <p>Fumetti disponibili</p>
     </caption>
-    
+
     <thead>
         <tr>
             <th>Titolo</th>
@@ -14,7 +16,7 @@
             <th>Prezzo</th>
             <th>Serie</th>
             <th>Data di uscita</th>
-            <th>Categoria</th>
+            <th>Tipo</th>
         </tr>
     </thead>
     
