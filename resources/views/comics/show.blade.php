@@ -27,6 +27,7 @@
             <td>{{ $comic->type }}</td>
         </tr>
     </tbody>
-    </table>
+</table>
 
+<a href="{{ route('comics.index') }}">Torna all'elenco</a>
 @endsection

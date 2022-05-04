@@ -30,6 +30,7 @@
                 <td>{{ $comic->sale_date }}</td>
                 <td>{{ $comic->type }}</td>
                 <td><a href="{{ route('comics.show', $comic) }}">Visualizza</a></td>
+                <td><a href="{{ route('comics.edit', $comic) }}">Modifica</a></td>
             </tr>
         @endforeach
     </tbody>
