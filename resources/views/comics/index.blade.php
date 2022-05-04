@@ -31,6 +31,14 @@
                 <td>{{ $comic->type }}</td>
                 <td><a href="{{ route('comics.show', $comic) }}">Visualizza</a></td>
                 <td><a href="{{ route('comics.edit', $comic) }}">Modifica</a></td>
+                <td>
+                    <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit">Elimina</button>
+                    </form>
+                </td>
             </tr>
         @endforeach
     </tbody>
