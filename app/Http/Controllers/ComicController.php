@@ -45,10 +45,10 @@ class ComicController extends Controller
             'sale_date' => 'required|date',
             'type' => 'required|max:50',
         ]);
-        
-        $res = $request->all();
+
+        $data = $request->all();
         $newComic = new Comic();
-        $newComic->fill($res);
+        $newComic->fill($data);
         $newComic->save();
 
         return redirect()->route('comics.show', $newComic);
@@ -85,6 +85,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $validateData = $request->validate([
+            'title' => 'required|max:50|min:5',
+            'description' => 'required|max:200|min:10',
+            'thumb' => 'nullable|url',
+            'price' => 'required|numeric',
+            'series' => 'required|max:50|min:5',
+            'sale_date' => 'required|date',
+            'type' => 'required|max:50',
+        ]);
+
         $data = $request->all();
         $comic->update($data);
         return redirect()->route('comics.show', $comic);

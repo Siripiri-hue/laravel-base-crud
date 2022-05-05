@@ -39,13 +39,13 @@
         </select>
     </div>
 
-    {{-- @if ($errors->any())
+    @if ($errors->any())
         <ul>
-            @foreach ($errors as $error)
+            @foreach ($errors->all() as $error)
                 <li> {{ $error }}</li>        
             @endforeach
         </ul>
-    @endif --}}
+    @endif
 
     <button>Salva modifiche</button>
 </form>
