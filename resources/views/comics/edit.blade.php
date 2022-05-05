@@ -8,7 +8,7 @@
 
     <div>
         <label for="title">Titolo</label>
-        <input type="text" name="title" placeholder="{{ $comic->title }}">
+        <input type="text" name="title" value="{{ $comic->title }}"">
     </div>
 
     <div>
@@ -18,17 +18,17 @@
 
     <div>
         <label for="series">Serie</label>
-        <input type="text" name="series" placeholder="{{ $comic->series }}">
+        <input type="text" name="series" value="{{ $comic->series }}">
     </div>
 
     <div>
         <label for="price">Prezzo</label>
-        <input type="text" name="price" placeholder="{{ $comic->price }}">
+        <input type="text" name="price" value="{{ $comic->price }}">
     </div>
 
     <div>
         <label for="sale_date">Data uscita</label>
-        <input type="text" name="sale_date" placeholder="{{ $comic->sale_date }}">
+        <input type="text" name="sale_date" value="{{ $comic->sale_date }}">
     </div>
 
     <div>
@@ -39,7 +39,7 @@
         </select>
     </div>
 
-    <button>Aggiungi fumetto</button>
+    <button>Salva modifiche</button>
 </form>
 
 @endsection
